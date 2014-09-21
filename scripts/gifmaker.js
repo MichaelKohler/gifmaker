@@ -52,7 +52,7 @@
     }
 
     function generateGIF(ev) {
-        var gif = new GIF({ workers: 2, quality: 10 });
+        var gif = new GIF({ workers: 2, quality: 10, workerScript: 'scripts/gif.worker.js' });
         images.forEach(function(image) {
             gif.addFrame(image);
         });
